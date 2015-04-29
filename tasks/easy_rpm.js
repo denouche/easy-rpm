@@ -148,6 +148,10 @@ function applySpecSettings(grunt, options, spec) {
         spec.addRequirements.apply(spec, options.requires);
     }
 
+    if (_.has(options, 'provides')) {
+        spec.addProvides.apply(spec, options.provides);
+    }
+
     spec.tags.autoReq = options.autoReq || spec.tags.autoReq;
     spec.tags.autoProv = options.autoProv || spec.tags.autoProv;
 

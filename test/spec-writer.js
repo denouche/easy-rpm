@@ -84,6 +84,7 @@ describe('spec writer', function() {
             spec.tags.autoReq = false;
             spec.tags.autoProv = false;
             spec.addRequirements('quux > 1.6.9', 'k9 <= 2.0');
+            spec.addProvides('virtualTestPackage');
             spec.addConflicts('quux = 1.6.9', 'baz < 1.2');
             spec.addExcludeArchs('sparc', 'alpha');
             spec.addExclusiveArchs('x86', 'powerpc');
